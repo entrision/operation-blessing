@@ -17,7 +17,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'carrierwave'
 gem 'fog'
 gem 'devise'
-# gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', github: 'gregbell/active_admin'
 
 gem 'puma', group: :development
 

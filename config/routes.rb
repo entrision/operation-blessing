@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
+  ActiveAdmin.routes(self)
   devise_for :users
-  # devise_for :users do
-  #   root 'devise/sessions#new'
-  # end
+
+  root to: redirect("/users/sign_in")
 end
