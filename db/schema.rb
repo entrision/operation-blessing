@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150326203122) do
+ActiveRecord::Schema.define(version: 20150330160756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,20 +31,13 @@ ActiveRecord::Schema.define(version: 20150326203122) do
   add_index "active_admin_comments", ["namespace"], name: "index_active_admin_comments_on_namespace", using: :btree
   add_index "active_admin_comments", ["resource_type", "resource_id"], name: "index_active_admin_comments_on_resource_type_and_resource_id", using: :btree
 
-  create_table "albums", force: :cascade do |t|
-    t.text     "description"
-    t.text     "email_description"
-    t.string   "location"
-    t.date     "for_date"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
-  end
-
   create_table "photos", force: :cascade do |t|
     t.string   "url"
-    t.integer  "album_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "prayer"
+    t.string   "location"
+    t.date     "for_date"
   end
 
   create_table "users", force: :cascade do |t|
